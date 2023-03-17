@@ -43,12 +43,16 @@
 
 <div class="container pt-5">
 
-  <h2 class="pb-3 display-4">Crea un nuovo Prodotto</h2>
-  <form>
+  <h2 id="titolo" class="pb-3 display-4">Crea un nuovo Prodotto</h2>
+  <form onsubmit="gestisciSubmit(event)">
     
     <div class="mb-3">
       <label for="name" class="form-label">Nome del Prodotto:</label>
       <input type="text" class="form-control" id="name">
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Descrizione del prodotto:</label>
+      <input type="text" class="form-control" id="description">
     </div>
     <div class="mb-3">
       <label for="brand" class="form-label">Brand del Prodotto:</label>
@@ -60,20 +64,14 @@
     </div>
     <div class="mb-3">
       <label for="name" class="form-label">Prezzo del prodotto:</label>
-      <input type="text" class="form-control" id="name">
-    </div>
-    <div class="mb-3">
-      <label for="price" class="form-label">Descrizione del prodotto:</label>
       <input type="text" class="form-control" id="price">
     </div>
-
-
-
-
+    
     <div class="d-flex justify-content-between">
-      <button type="submit" class="btn btn-primary">Crea nuovo prodotto</button>
-      <button type="submit" class="btn btn-warning d-none">Modifica prodotto</button>
-      <button type="reset" class="btn btn-danger d-none">Delete</button>
+      <button id="create" type="submit" class="btn btn-primary">Crea nuovo prodotto</button>
+      <button id="edit" type="submit" class="btn btn-warning d-none">Modifica prodotto</button>
+      <button 
+      onclick="cancellaProdotto()" id="delete" type="reset" class="btn btn-danger d-none">Elimina Prodotto</button>
     </div>
   </form>
   </div>
