@@ -39,7 +39,7 @@ const gestisciSubmit = event => {
     name: document.getElementById("name").value,
     description: document.getElementById("description").value,
     brand: document.getElementById("brand").value,
-    imgUrl: document.getElementById("imgUrl").value,
+    imageUrl: document.getElementById("imgUrl").value,
     price: document.getElementById("price").value,
   };
   fetch(endpoint, {
