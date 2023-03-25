@@ -17,7 +17,8 @@ window.onload = () => {
 
     fetch(endpoint, {
       headers: {
-        Authorization: `Bearer  ${token}`,
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0MmUxMmY4MWI0MjAwMTM5YjI3ZGYiLCJpYXQiOjE2Nzk3NTY4MDEsImV4cCI6MTY4MDk2NjQwMX0.OusZNWHs37v-Zr_hda0h81yu-UkGAsUNJ_w3iE7Dhj4",
       },
     })
       .then(res => res.json())
@@ -45,11 +46,13 @@ const gestisciSubmit = event => {
   fetch(endpoint, {
     method,
     body: JSON.stringify(newProduct),
-    header: {
-      Authorization: `Bearer ${token}`,
+    headers: new Headers({
       "Content-Type": "application/json",
-    },
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0MmUxMmY4MWI0MjAwMTM5YjI3ZGYiLCJpYXQiOjE2Nzk3NTY4MDEsImV4cCI6MTY4MDk2NjQwMX0.OusZNWHs37v-Zr_hda0h81yu-UkGAsUNJ_w3iE7Dhj4",
+    }),
   }).catch(error => console.log(error));
+  window.location.replace("/home.html");
 };
 
 const cancellaProdotto = () => {
